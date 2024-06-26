@@ -1,11 +1,11 @@
 import { ModuleMetadata, Type } from '@nestjs/common'
-import { DockerOptions } from 'src'
+import { DockerOptions } from 'dockerode'
 
 export interface DockerodeModuleOptions {
   config: DockerOptions
 }
 
-export { DockerOptions } from 'src'
+export { DockerOptions } from 'dockerode'
 
 export interface DockerodeModuleOptionsFactory {
   createDockerodeModuleOptions(): Promise<DockerodeModuleOptions> | DockerodeModuleOptions

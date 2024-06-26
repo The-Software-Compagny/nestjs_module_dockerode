@@ -1,6 +1,6 @@
 {
   "name": "@the-software-compagny/nestjs_module_dockerode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NestJS module for Dockerode to interact with Docker API with NodeJS",
   "repository": "https://github.com/The-Software-Compagny/nestjs_module_dockerode.git",
   "author": "tacxou <12997062+tacxou@users.noreply.github.com> (https://github.com/tacxou)",
@@ -19,14 +19,11 @@
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc --build tsconfig.json",
-    "postbuild": "cpr README.md dist/README.md && cpr LICENSE dist/LICENSE && cpr package.json dist/package.json",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "build": "tsc",
+    "postbuild": "cpr README.md dist/README.md && cpr LICENSE dist/LICENSE && cpr package.json dist/package.json"
+  },
+  "dependencies": {
+    "dockerode": "^4.0.2"
   },
   "devDependencies": {
     "@nestjs/common": "^10.3.9",

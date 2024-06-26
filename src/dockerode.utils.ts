@@ -1,4 +1,4 @@
-import Dockerode from 'src'
+import Docker from 'dockerode'
 import { DOCKERODE_MODULE_CONNECTION, DOCKERODE_MODULE_CONNECTION_TOKEN, DOCKERODE_MODULE_OPTIONS_TOKEN } from './dockerode.constants'
 import { DockerodeModuleOptions } from './dockerode.interfaces'
 import { Logger } from '@nestjs/common'
@@ -15,7 +15,7 @@ export function getDockerodeConnectionToken(connection: string): string {
 export async function createDockerodeConnection(options: DockerodeModuleOptions) {
   const { config } = options
   try {
-    const docker = new Dockerode(config)
+    const docker = new Docker(config)
     const res = await docker.ping()
     Logger.log(`Dockerode connection established: ${res} !`, DockerodeModule.name)
     return docker
