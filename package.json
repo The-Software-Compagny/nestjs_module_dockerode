@@ -1,6 +1,6 @@
 {
   "name": "@the-software-compagny/nestjs_module_dockerode",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "NestJS module for Dockerode to interact with Docker API with NodeJS",
   "repository": "https://github.com/The-Software-Compagny/nestjs_module_dockerode.git",
   "author": "tacxou <12997062+tacxou@users.noreply.github.com> (https://github.com/tacxou)",
