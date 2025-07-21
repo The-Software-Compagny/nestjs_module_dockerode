@@ -14,6 +14,9 @@ export function getDockerodeConnectionToken(connection: string): string {
 
 export async function createDockerodeConnection(options: DockerodeModuleOptions) {
   const { config } = options
+  const logger = new Logger(DockerodeModule.name)
+  logger.verbose(`Creating Dockerode connection with options: ${JSON.stringify(options)}`)
+
   try {
     const docker = new Docker(config)
     const res = await docker.ping()
